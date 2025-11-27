@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YB Parfume - Arabische & Luxe Geuren</title>
+    <meta name="description" content="YB Parfume - Online parfumshop met Lattafa, Armaf, Al Haramain, Fragrance World, French Avenue, Maison Al Hambra en meer. Bestel eenvoudig via WhatsApp of TikTok DM.">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #050816;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(12px);
+            background: rgba(5, 8, 22, 0.92);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: #d1d5db;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+            gap: 2.5rem;
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+            align-items: center;
+        }
+
+        .hero-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #a5b4fc;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 4vw, 3.1rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(to right, #a855f7, #22d3ee);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            color: #9ca3af;
+            font-size: 0.98rem;
+            max-width: 34rem;
+            margin-bottom: 1.7rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            padding: 0.25rem 0.7rem;
+            color: #e5e7eb;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.7rem 1.5rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            color: #ffffff;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #e5e7eb;
+        }
+
+        .hero-card {
+            background: radial-gradient(circle at top, rgba(79, 70, 229, 0.4), transparent 60%);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            padding: 1.6rem 1.5rem 1.8rem;
+            box-shadow: 0 22px 45px rgba(15, 23, 42, 0.8);
+        }
+
+        .hero-card-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #9ca3af;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-card-main {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-card-sub {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-bottom: 1.1rem;
+        }
+
+        .hero-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            font-size: 0.78rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            color: #e5e7eb;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        section p.section-subtitle {
+            font-size: 0.88rem;
+            color: #9ca3af;
+            margin-bottom: 1.8rem;
+        }
+
+        /* MERKEN */
+        .brands-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .brand-pill {
+            font-size: 0.8rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.5);
+            background: rgba(15,23,42,0.85);
+            color: #e5e7eb;
+        }
+
+        /* COLLECTIE */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            border-radius: 1.1rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            padding: 1.2rem 1.1rem 1.3rem;
+            background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.32), rgba(15, 23, 42, 0.95));
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .card p {
+            font-size: 0.84rem;
+            color: #9ca3af;
+            margin-bottom: 0.6rem;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-bottom: 0.7rem;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .chip {
+            font-size: 0.74rem;
+            border-radius: 999px;
+            padding: 0.2rem 0.6rem;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+        }
+
+        .price {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+        }
+
+        /* USP / WAAROM */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .usp-item {
+            border-radius: 1rem;
+            border: 1px solid rgba(55, 65, 81, 0.9);
+            padding: 1rem 1rem 1.1rem;
+            background: rgba(15,23,42,0.9);
+            font-size: 0.86rem;
+        }
+
+        .usp-item h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .usp-item p {
+            color: #9ca3af;
+        }
+
+        /* BESTELLEN / CONTACT */
+        .order-box {
+            border-radius: 1.2rem;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            padding: 1.7rem 1.5rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.4fr);
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .order-steps {
+            font-size: 0.88rem;
+            color: #d1d5db;
+        }
+
+        .order-steps ol {
+            margin-left: 1.1rem;
+            margin-top: 0.4rem;
+        }
+
+        .order-steps li {
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item {
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .contact-item span {
+            color: #9ca3af;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(31, 41, 55, 0.9);
+            padding: 1.2rem 1.5rem 1.8rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        @media (max-width: 800px) {
+            .hero,
+            .order-box {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+
+            .nav-links {
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .nav-links a {
+                margin: 0 1rem 0.4rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <div class="logo">YB PARFUME</div>
+        <div class="nav-links">
+            <a href="#collectie">Collectie</a>
+            <a href="#merken">Merken</a>
+            <a href="#waarom">Waarom YB</a>
+            <a href="#bestellen">Bestellen</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <div class="hero-tag">Online parfumshop · Nederland</div>
+            <h1 class="hero-title">
+                Ontdek <span>Arabische & luxe geuren</span><br>voor prijzen die wél logisch zijn.
+            </h1>
+            <p class="hero-subtitle">
+                YB Parfume brengt de bekendste parfums en Arabische toppers naar jou toe.
+                Lattafa, Armaf, Al Haramain, Fragrance World, French Avenue, Maison Al Hambra en meer –
+                direct te bestellen via WhatsApp of TikTok DM.
+            </p>
+
+            <div class="hero-badges">
+                <div class="badge">Populaire TikTok geuren</div>
+                <div class="badge">Lattafa · Armaf · Al Haramain</div>
+                <div class="badge">Snelle reactie op je bericht</div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#collectie" class="btn btn-primary">Bekijk collectie</a>
+                <a href="#bestellen" class="btn btn-ghost">Bestel via WhatsApp</a>
+            </div>
+        </div>
+        <aside class="hero-card">
+            <div class="hero-card-title">YB Parfume</div>
+            <div class="hero-card-main">Ik help je de juiste geur te kiezen.</div>
+            <div class="hero-card-sub">
+                Weet je niet welke parfum bij jou past? Stuur me een DM met wat je zoekt
+                (fris, zoet, zwaar, avond, zomer, etc.) en ik geef je een snelle aanbeveling.
+            </div>
+            <div class="hero-card-tags">
+                <span class="tag">@YBparfume</span>
+                <span class="tag">TikTok advies</span>
+                <span class="tag">Nieuwe drops</span>
+            </div>
+        </aside>
+    </section>
+
+    <!-- MERKEN -->
+    <section id="merken">
+        <h2>Merken die ik verkoop</h2>
+        <p class="section-subtitle">
+            Een selectie van populaire en geliefde merken. Vraag gerust naar andere geuren – grote kans dat ik ze kan regelen.
+        </p>
+        <div class="brands-row">
+            <div class="brand-pill">Lattafa</div>
+            <div class="brand-pill">Armaf</div>
+            <div class="brand-pill">Al Haramain</div>
+            <div class="brand-pill">Fragrance World</div>
+            <div class="brand-pill">French Avenue</div>
+            <div class="brand-pill">Maison Al Hambra</div>
+            <div class="brand-pill">En meer op aanvraag</div>
+        </div>
+    </section>
+
+    <!-- COLLECTIE -->
+    <section id="collectie">
+        <h2>Populaire geuren</h2>
+        <p class="section-subtitle">
+            Enkele voorbeelden uit de collectie. Wil je een specifieke geur? Stuur me een bericht met de naam en ik check de voorraad en prijs.
+        </p>
+        <div class="card-grid">
+            <article class="card">
+                <h3>Lattafa - Asad</h3>
+                <p>Rijke, warme geur met vanille, amber en kruiden. Perfect voor avonden en koude dagen.</p>
+                <div class="card-meta">Categorie: Zoet · Warm · Sterk</div>
+                <div class="price">Prijs op aanvraag</div>
+                <div class="chip-row">
+                    <span class="chip">Lattafa</span>
+                    <span class="chip">Avond</span>
+                    <span class="chip">TikTok favorite</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Lattafa - Khamrah</h3>
+                <p>Cinnemon, vanille en gedroogd fruit. Eén van de meest gehypte Arabische geuren van dit moment.</p>
+                <div class="card-meta">Categorie: Zoet · Gourmand</div>
+                <div class="price">Prijs op aanvraag</div>
+                <div class="chip-row">
+                    <span class="chip">Lattafa</span>
+                    <span class="chip">Unisex</span>
+                    <span class="chip">Sterke performance</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Armaf - Club de Nuit Intense Man</h3>
+                <p>Frisse, citrus-achtige opening met een smoky drydown. Ideaal voor mannen die op willen vallen.</p>
+                <div class="card-meta">Categorie: Frisse chypre</div>
+                <div class="price">Prijs op aanvraag</div>
+                <div class="chip-row">
+                    <span class="chip">Armaf</span>
+                    <span class="chip">Heren</span>
+                    <span class="chip">Allround</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Maison Al Hambra - Diverse Collectie</h3>
+                <p>Moderne, luxe geuren geïnspireerd op bekende niche en designer parfums.</p>
+                <div class="card-meta">Categorie: Luxe · Niche vibes</div>
+                <div class="price">Prijs op aanvraag</div>
+                <div class="chip-row">
+                    <span class="chip">Maison Al Hambra</span>
+                    <span class="chip">Unisex opties</span>
+                    <span class="chip">Prijs/kwaliteit top</span>
+                </div>
+            </article>
+        </div>
+        <p style="font-size:0.8rem;color:#6b7280;margin-top:0.8rem;">
+            *Let op: bovenstaande is een kleine selectie. Stuur mij een bericht voor de volledige lijst en actuele prijzen.
+        </p>
+    </section>
+
+    <!-- WAAROM YB -->
+    <section id="waarom">
+        <h2>Waarom bestellen bij YB Parfume?</h2>
+        <p class="section-subtitle">
+            Geen grote webshop, maar persoonlijke service. Je praat direct met mij, niet met een chatbot.
+        </p>
+        <div class="usp-grid">
+            <div class="usp-item">
+                <h3>Persoonlijk parfumadvies</h3>
+                <p>
+                    Vertel me je budget, stijl en waarvoor je parfum zoekt (school, werk, moskee, avond, date),
+                    en ik stuur je meerdere opties die bij jou passen.
+                </p>
+            </div>
+            <div class="usp-item">
+                <h3>Focus op populaire geuren</h3>
+                <p>
+                    Ik haal de geuren waar nu veel vraag naar is: TikTok-klassiekers, Arabische toppers
+                    en goede prijs/kwaliteit combinaties.
+                </p>
+            </div>
+            <div class="usp-item">
+                <h3>Snelle communicatie</h3>
+                <p>
+                    Bestellen gaat via WhatsApp of TikTok DM. Je krijgt snel antwoord over prijs, voorraad en levertijd.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BESTELLEN / CONTACT -->
+    <section id="bestellen">
+        <h2>Bestellen & contact</h2>
+        <p class="section-subtitle">
+            Klaar om te bestellen of wil je eerst advies? Volg de stappen hieronder.
+        </p>
+        <div class="order-box">
+            <div class="order-steps">
+                <strong>Zo werkt het:</strong>
+                <ol>
+                    <li>Noteer de naam van de parfum(s) die je wilt – of vraag mij om advies.</li>
+                    <li>Stuur mij een bericht via WhatsApp of TikTok DM met jouw lijst en eventuele vragen.</li>
+                    <li>Ik stuur je de prijs, beschikbaarheid en info over levering/verzending.</li>
+                    <li>Na akkoord regelen we de betaling en verzending/afspraak.</li>
+                </ol>
+                <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.75rem;">
+                    <a href="https://wa.me/31648397035" class="btn btn-primary">Bestel via WhatsApp</a>
+                    <a href="https://www.tiktok.com/@YBparfume" class="btn btn-ghost">Bekijk TikTok @YBparfume</a>
+                </div>
+            </div>
+            <div>
+                <div class="contact-item">
+                    <span>WhatsApp</span>
+                    <a href="tel:+31648397035">06 48 39 70 35</a>
+                </div>
+                <div class="contact-item">
+                    <span>TikTok</span>
+                    <a href="https://www.tiktok.com/@YBparfume" target="_blank">@YBparfume</a>
+                </div>
+                <div class="contact-item">
+                    <span>Locatie</span>
+                    Nederland (verzending binnen NL – details via chat)
+                </div>
+                <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.6rem;">
+                    Tip: stuur een voicebericht met wat je zoekt (bijv. "fris voor overdag", "sterk voor de avond",
+                    "iets voor speciale gelegenheden") dan kan ik sneller matchen.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © <span id="year"></span> YB Parfume. Alle rechten voorbehouden.
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
